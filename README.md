@@ -29,6 +29,42 @@ Prerequisites
 - Java Platform Standard Edition 6.0 Development Kit (JDK 1.6.0_19) or newer. If your version of the JDK is older than 6.0, you must install the newer version. For more information, go to the Java SE Downloads page. 
 
 
+Building when migrating to new Amazon MWS Order library version
+===============================================================================
+
+```shell
+$ git clone https://github.com/trifonnt/amazon-mws-orders.git
+
+$ cd amazon-mws-orders
+
+$ mkdir orig-library
+
+$ cd orig-library
+
+$ wget https://images-na.ssl-images-amazon.com/images/G/01/mwsportal/clientlib/Orders/2013-09-01/MWSOrdersJavaClientLibrary-2013-09-01._V293334172_.zip
+
+$ unzip MWSOrdersJavaClientLibrary-2013-09-01._V293334172_.zip
+
+
+$ mv src/com/amazonservices/mws/orders/_2013_09_01/mock/*.xml ../src/test/resources/
+$ mv src/com/amazonservices/mws/orders/_2013_09_01/mock/MarketplaceWebServiceOrdersMock.java ../src/test/java/com/amazonservices/mws/orders/_2013_09_01/mock/
+$ rm src/com/amazonservices/mws/orders/_2013_09_01/mock -r
+
+$ mv src/com/amazonservices/mws/orders/_2013_09_01/samples/*.java ../src/test/java/com/amazonservices/mws/orders/_2013_09_01/samples/
+$ rm src/com/amazonservices/mws/orders/_2013_09_01/samples -r
+
+$ mv src/com/amazonservices/mws/orders/_2013_09_01/*.java ../src/main/java/com/amazonservices/mws/orders/_2013_09_01
+$ mv src/com/amazonservices/mws/orders/_2013_09_01/model/*.java ../src/main/java/com/amazonservices/mws/orders/_2013_09_01/model
+$ rm -r src/com/amazonservices/mws/orders/_2013_09_01/model
+
+$ mv runtime-src/com/amazonservices/mws/client/*.java ../src/main/java/com/amazonservices/mws/client
+
+
+$ mvn clean install -Dmaven.javadoc.skip=true -DskipTests=true
+
+```
+
+
 Licensing
 =============================================================================== 
 

@@ -3,8 +3,6 @@ package com.amazonservices.mws.orders._2013_09_01;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.when;
 
-import javax.management.RuntimeErrorException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -52,8 +50,8 @@ public class MarketplaceWebServiceOrdersClientTest {
     Mockito.verify(mockConnection).setAwsAccessKeyId(ACCESS_KEY);
     Mockito.verify(mockConnection).setAwsSecretKeyId(SECRET_KEY);
     Mockito.verify(mockConnection).setApplicationName("MarketplaceWebServiceOrders");
-    Mockito.verify(mockConnection).setApplicationVersion("2013-09-01");
-    Mockito.verify(mockConnection).setLibraryVersion("2013-09-01");
+    Mockito.verify(mockConnection).setApplicationVersion("2015-09-24");
+    Mockito.verify(mockConnection).setLibraryVersion("2015-09-24");
     Mockito.verifyNoMoreInteractions(mockConnection);
   }
 

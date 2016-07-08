@@ -19,10 +19,10 @@
 		<version>9</version>
 	</parent-->
 
-	<groupId>name.trifon.library.amazon.mws</groupId>
-	<artifactId>amazon-mws-orders</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<groupId>technology.integration.amazonservices.mws</groupId>
+	<artifactId>amazon-mws-order</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
 	<name>Amazon MWS :: Orders</name>
 	<description>Amazon MWS Orders API Client Library</description>
 	<url>http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html</url>
@@ -35,8 +35,8 @@
 	</licenses>
 	<developers>
 		<developer>
-			<id>amazon-mws</id>
-			<organization>Amazon Technologies, Inc</organization>
+			<id>amazonmws</id>
+			<organization>Amazon MWS</organization>
 			<organizationUrl>https://developer.amazonservices.com/gp/mws/docs.html/</organizationUrl>
 			<roles>
 				<role>developer</role>
@@ -44,9 +44,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git@github.com:trifonnt/amazon-mws-orders.git</connection>
-		<developerConnection>scm:git:git@github.com:trifonnt/amazon-mws-orders.git</developerConnection>
-		<url>git@github.com:trifonnt/amazon-mws-orders.git</url>
+		<connection>scm:git:git@github.com:integration-technology/amazon-mws-orders.git</connection>
+		<developerConnection>scm:git:git@github.com:integration-technology/amazon-mws-orders.git</developerConnection>
+		<url>git@github.com:integration-technology/amazon-mws-orders.git</url>
 	</scm>
 	<prerequisites>
 		<maven>3.0.2</maven>
@@ -71,25 +71,51 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>${commons-codec-version}</version>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore-osgi</artifactId>
+			<version>${org-apache-httpcomponents-version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>commons-logging</groupId>
-		    <artifactId>commons-logging-api</artifactId>
-		    <version>${commons-logging-version}</version>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-osgi</artifactId>
+			<version>${org-apache-httpcomponents-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>${org-apache-httpcomponents-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${org-apache-httpcomponents-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpcore</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>${org-apache-httpcomponents-version}</version>
-			<!--exclusions>
+			<exclusions>
 				<exclusion>
 					<groupId>org.apache.httpcomponents</groupId>
 					<artifactId>httpcore</artifactId>
 				</exclusion>
-			</exclusions-->
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
@@ -101,7 +127,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit-version}</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -168,7 +193,7 @@
 						<source>${jdk.version}</source>
 						<quiet>true</quiet>
 						<detectOfflineLinks>false</detectOfflineLinks>
-						<javadocVersion>1.8</javadocVersion>
+						<javadocVersion>${jdk.version}</javadocVersion>
 						<encoding>${project.build.sourceEncoding}</encoding>
 					</configuration>
 				</plugin>
@@ -190,6 +215,17 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<!-- Generate the MANIFEST-FILE of the bundle -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+					</instructions>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>

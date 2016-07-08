@@ -11,6 +11,13 @@
                 <Title>String</Title>
                 <QuantityOrdered>1</QuantityOrdered>
                 <QuantityShipped>1</QuantityShipped>
+                <PointsGranted>
+                    <PointsNumber>1</PointsNumber>
+                    <PointsMonetaryValue>
+                        <CurrencyCode>String</CurrencyCode>
+                        <Amount>String</Amount>
+                    </PointsMonetaryValue>
+                </PointsGranted>
                 <ItemPrice>
                     <CurrencyCode>String</CurrencyCode>
                     <Amount>String</Amount>
@@ -67,6 +74,10 @@
                 <ConditionSubtypeId>String</ConditionSubtypeId>
                 <ScheduledDeliveryStartDate>String</ScheduledDeliveryStartDate>
                 <ScheduledDeliveryEndDate>String</ScheduledDeliveryEndDate>
+                <PriceDesignation>String</PriceDesignation>
+                <BuyerCustomizedInfo>
+                    <CustomizedURL>String</CustomizedURL>
+                </BuyerCustomizedInfo>
             </OrderItem>
         </OrderItems>
     </ListOrderItemsResult>

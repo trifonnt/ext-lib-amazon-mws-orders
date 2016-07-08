@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * List Orders Request
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01.model;
 
@@ -33,6 +33,7 @@ import com.amazonservices.mws.client.*;
  *       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *          &lt;sequence&gt;
  *             &lt;element name="SellerId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *             &lt;element name="MWSAuthToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *             &lt;element name="CreatedAfter" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
  *             &lt;element name="CreatedBefore" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
  *             &lt;element name="LastUpdatedAfter" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
@@ -54,6 +55,8 @@ import com.amazonservices.mws.client.*;
 public class ListOrdersRequest extends AbstractMwsObject {
 
     private String sellerId;
+
+    private String mwsAuthToken;
 
     private XMLGregorianCalendar createdAfter;
 
@@ -117,6 +120,47 @@ public class ListOrdersRequest extends AbstractMwsObject {
      */
     public ListOrdersRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
+        return this;
+    }
+
+    /**
+     * Get the value of MWSAuthToken.
+     *
+     * @return The value of MWSAuthToken.
+     */
+    public String getMWSAuthToken() {
+        return mwsAuthToken;
+    }
+
+    /**
+     * Set the value of MWSAuthToken.
+     *
+     * @param mwsAuthToken
+     *            The new value to set.
+     */
+    public void setMWSAuthToken(String mwsAuthToken) {
+        this.mwsAuthToken = mwsAuthToken;
+    }
+
+    /**
+     * Check to see if MWSAuthToken is set.
+     *
+     * @return true if MWSAuthToken is set.
+     */
+    public boolean isSetMWSAuthToken() {
+        return mwsAuthToken != null;
+    }
+
+    /**
+     * Set the value of MWSAuthToken, return this.
+     *
+     * @param mwsAuthToken
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public ListOrdersRequest withMWSAuthToken(String mwsAuthToken) {
+        this.mwsAuthToken = mwsAuthToken;
         return this;
     }
 
@@ -686,6 +730,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     @Override
     public void readFragmentFrom(MwsReader r) {
         sellerId = r.read("SellerId", String.class);
+        mwsAuthToken = r.read("MWSAuthToken", String.class);
         createdAfter = r.read("CreatedAfter", XMLGregorianCalendar.class);
         createdBefore = r.read("CreatedBefore", XMLGregorianCalendar.class);
         lastUpdatedAfter = r.read("LastUpdatedAfter", XMLGregorianCalendar.class);
@@ -709,6 +754,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     @Override
     public void writeFragmentTo(MwsWriter w) {
         w.write("SellerId", sellerId);
+        w.write("MWSAuthToken", mwsAuthToken);
         w.write("CreatedAfter", createdAfter);
         w.write("CreatedBefore", createdBefore);
         w.write("LastUpdatedAfter", lastUpdatedAfter);
@@ -735,6 +781,24 @@ public class ListOrdersRequest extends AbstractMwsObject {
     }
 
     /** Value constructor. */
+    public ListOrdersRequest(String sellerId,String mwsAuthToken,XMLGregorianCalendar createdAfter,XMLGregorianCalendar createdBefore,XMLGregorianCalendar lastUpdatedAfter,XMLGregorianCalendar lastUpdatedBefore,List<String> orderStatus,List<String> marketplaceId,List<String> fulfillmentChannel,List<String> paymentMethod,String buyerEmail,String sellerOrderId,Integer maxResultsPerPage,List<String> tfmShipmentStatus) {
+        this.sellerId = sellerId;
+        this.mwsAuthToken = mwsAuthToken;
+        this.createdAfter = createdAfter;
+        this.createdBefore = createdBefore;
+        this.lastUpdatedAfter = lastUpdatedAfter;
+        this.lastUpdatedBefore = lastUpdatedBefore;
+        this.orderStatus = orderStatus;
+        this.marketplaceId = marketplaceId;
+        this.fulfillmentChannel = fulfillmentChannel;
+        this.paymentMethod = paymentMethod;
+        this.buyerEmail = buyerEmail;
+        this.sellerOrderId = sellerOrderId;
+        this.maxResultsPerPage = maxResultsPerPage;
+        this.tfmShipmentStatus = tfmShipmentStatus;
+    }    
+
+    /** Legacy value constructor. */
     public ListOrdersRequest(String sellerId,XMLGregorianCalendar createdAfter,XMLGregorianCalendar createdBefore,XMLGregorianCalendar lastUpdatedAfter,XMLGregorianCalendar lastUpdatedBefore,List<String> orderStatus,List<String> marketplaceId,List<String> fulfillmentChannel,List<String> paymentMethod,String buyerEmail,String sellerOrderId,Integer maxResultsPerPage,List<String> tfmShipmentStatus) {
         this.sellerId = sellerId;
         this.createdAfter = createdAfter;
@@ -750,6 +814,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
         this.maxResultsPerPage = maxResultsPerPage;
         this.tfmShipmentStatus = tfmShipmentStatus;
     }
+    
 
     /** Default constructor. */
     public ListOrdersRequest() {

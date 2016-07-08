@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * Order
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01.model;
 
@@ -59,6 +59,10 @@ import com.amazonservices.mws.client.*;
  *             &lt;element name="LatestShipDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
  *             &lt;element name="EarliestDeliveryDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
  *             &lt;element name="LatestDeliveryDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *             &lt;element name="IsBusinessOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *             &lt;element name="PurchaseOrderNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *             &lt;element name="IsPrime" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *             &lt;element name="IsPremiumOrder" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
  *          &lt;/sequence&gt;
  *       &lt;/restriction&gt;
  *    &lt;/complexContent&gt;
@@ -120,6 +124,14 @@ public class Order extends AbstractMwsObject {
     private XMLGregorianCalendar earliestDeliveryDate;
 
     private XMLGregorianCalendar latestDeliveryDate;
+
+    private Boolean isBusinessOrder;
+
+    private String purchaseOrderNumber;
+
+    private Boolean isPrime;
+
+    private Boolean isPremiumOrder;
 
     /**
      * Get the value of AmazonOrderId.
@@ -1251,6 +1263,197 @@ public class Order extends AbstractMwsObject {
     }
 
     /**
+     * Check the value of IsBusinessOrder.
+     *
+     * @return true if IsBusinessOrder is set to true.
+     */
+    public boolean isIsBusinessOrder() {
+        return isBusinessOrder!=null && isBusinessOrder.booleanValue();
+    }
+
+    /**
+     * Get the value of IsBusinessOrder.
+     *
+     * @return The value of IsBusinessOrder.
+     */
+    public Boolean getIsBusinessOrder() {
+        return isBusinessOrder;
+    }
+
+    /**
+     * Set the value of IsBusinessOrder.
+     *
+     * @param isBusinessOrder
+     *            The new value to set.
+     */
+    public void setIsBusinessOrder(Boolean isBusinessOrder) {
+        this.isBusinessOrder = isBusinessOrder;
+    }
+
+    /**
+     * Check to see if IsBusinessOrder is set.
+     *
+     * @return true if IsBusinessOrder is set.
+     */
+    public boolean isSetIsBusinessOrder() {
+        return isBusinessOrder != null;
+    }
+
+    /**
+     * Set the value of IsBusinessOrder, return this.
+     *
+     * @param isBusinessOrder
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public Order withIsBusinessOrder(Boolean isBusinessOrder) {
+        this.isBusinessOrder = isBusinessOrder;
+        return this;
+    }
+
+    /**
+     * Get the value of PurchaseOrderNumber.
+     *
+     * @return The value of PurchaseOrderNumber.
+     */
+    public String getPurchaseOrderNumber() {
+        return purchaseOrderNumber;
+    }
+
+    /**
+     * Set the value of PurchaseOrderNumber.
+     *
+     * @param purchaseOrderNumber
+     *            The new value to set.
+     */
+    public void setPurchaseOrderNumber(String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
+    /**
+     * Check to see if PurchaseOrderNumber is set.
+     *
+     * @return true if PurchaseOrderNumber is set.
+     */
+    public boolean isSetPurchaseOrderNumber() {
+        return purchaseOrderNumber != null;
+    }
+
+    /**
+     * Set the value of PurchaseOrderNumber, return this.
+     *
+     * @param purchaseOrderNumber
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public Order withPurchaseOrderNumber(String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        return this;
+    }
+
+    /**
+     * Check the value of IsPrime.
+     *
+     * @return true if IsPrime is set to true.
+     */
+    public boolean isIsPrime() {
+        return isPrime!=null && isPrime.booleanValue();
+    }
+
+    /**
+     * Get the value of IsPrime.
+     *
+     * @return The value of IsPrime.
+     */
+    public Boolean getIsPrime() {
+        return isPrime;
+    }
+
+    /**
+     * Set the value of IsPrime.
+     *
+     * @param isPrime
+     *            The new value to set.
+     */
+    public void setIsPrime(Boolean isPrime) {
+        this.isPrime = isPrime;
+    }
+
+    /**
+     * Check to see if IsPrime is set.
+     *
+     * @return true if IsPrime is set.
+     */
+    public boolean isSetIsPrime() {
+        return isPrime != null;
+    }
+
+    /**
+     * Set the value of IsPrime, return this.
+     *
+     * @param isPrime
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public Order withIsPrime(Boolean isPrime) {
+        this.isPrime = isPrime;
+        return this;
+    }
+
+    /**
+     * Check the value of IsPremiumOrder.
+     *
+     * @return true if IsPremiumOrder is set to true.
+     */
+    public boolean isIsPremiumOrder() {
+        return isPremiumOrder!=null && isPremiumOrder.booleanValue();
+    }
+
+    /**
+     * Get the value of IsPremiumOrder.
+     *
+     * @return The value of IsPremiumOrder.
+     */
+    public Boolean getIsPremiumOrder() {
+        return isPremiumOrder;
+    }
+
+    /**
+     * Set the value of IsPremiumOrder.
+     *
+     * @param isPremiumOrder
+     *            The new value to set.
+     */
+    public void setIsPremiumOrder(Boolean isPremiumOrder) {
+        this.isPremiumOrder = isPremiumOrder;
+    }
+
+    /**
+     * Check to see if IsPremiumOrder is set.
+     *
+     * @return true if IsPremiumOrder is set.
+     */
+    public boolean isSetIsPremiumOrder() {
+        return isPremiumOrder != null;
+    }
+
+    /**
+     * Set the value of IsPremiumOrder, return this.
+     *
+     * @param isPremiumOrder
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public Order withIsPremiumOrder(Boolean isPremiumOrder) {
+        this.isPremiumOrder = isPremiumOrder;
+        return this;
+    }
+
+    /**
      * Read members from a MwsReader.
      *
      * @param r
@@ -1285,6 +1488,10 @@ public class Order extends AbstractMwsObject {
         latestShipDate = r.read("LatestShipDate", XMLGregorianCalendar.class);
         earliestDeliveryDate = r.read("EarliestDeliveryDate", XMLGregorianCalendar.class);
         latestDeliveryDate = r.read("LatestDeliveryDate", XMLGregorianCalendar.class);
+        isBusinessOrder = r.read("IsBusinessOrder", Boolean.class);
+        purchaseOrderNumber = r.read("PurchaseOrderNumber", String.class);
+        isPrime = r.read("IsPrime", Boolean.class);
+        isPremiumOrder = r.read("IsPremiumOrder", Boolean.class);
     }
 
     /**
@@ -1322,6 +1529,10 @@ public class Order extends AbstractMwsObject {
         w.write("LatestShipDate", latestShipDate);
         w.write("EarliestDeliveryDate", earliestDeliveryDate);
         w.write("LatestDeliveryDate", latestDeliveryDate);
+        w.write("IsBusinessOrder", isBusinessOrder);
+        w.write("PurchaseOrderNumber", purchaseOrderNumber);
+        w.write("IsPrime", isPrime);
+        w.write("IsPremiumOrder", isPremiumOrder);
     }
 
     /**
@@ -1336,7 +1547,7 @@ public class Order extends AbstractMwsObject {
     }
 
     /** Value constructor. */
-    public Order(String amazonOrderId,String sellerOrderId,XMLGregorianCalendar purchaseDate,XMLGregorianCalendar lastUpdateDate,String orderStatus,String fulfillmentChannel,String salesChannel,String orderChannel,String shipServiceLevel,Address shippingAddress,Money orderTotal,Integer numberOfItemsShipped,Integer numberOfItemsUnshipped,List<PaymentExecutionDetailItem> paymentExecutionDetail,String paymentMethod,String marketplaceId,String buyerEmail,String buyerName,String shipmentServiceLevelCategory,Boolean shippedByAmazonTFM,String tfmShipmentStatus,String cbaDisplayableShippingLabel,String orderType,XMLGregorianCalendar earliestShipDate,XMLGregorianCalendar latestShipDate,XMLGregorianCalendar earliestDeliveryDate,XMLGregorianCalendar latestDeliveryDate) {
+    public Order(String amazonOrderId,String sellerOrderId,XMLGregorianCalendar purchaseDate,XMLGregorianCalendar lastUpdateDate,String orderStatus,String fulfillmentChannel,String salesChannel,String orderChannel,String shipServiceLevel,Address shippingAddress,Money orderTotal,Integer numberOfItemsShipped,Integer numberOfItemsUnshipped,List<PaymentExecutionDetailItem> paymentExecutionDetail,String paymentMethod,String marketplaceId,String buyerEmail,String buyerName,String shipmentServiceLevelCategory,Boolean shippedByAmazonTFM,String tfmShipmentStatus,String cbaDisplayableShippingLabel,String orderType,XMLGregorianCalendar earliestShipDate,XMLGregorianCalendar latestShipDate,XMLGregorianCalendar earliestDeliveryDate,XMLGregorianCalendar latestDeliveryDate,Boolean isBusinessOrder,String purchaseOrderNumber,Boolean isPrime,Boolean isPremiumOrder) {
         this.amazonOrderId = amazonOrderId;
         this.sellerOrderId = sellerOrderId;
         this.purchaseDate = purchaseDate;
@@ -1364,11 +1575,50 @@ public class Order extends AbstractMwsObject {
         this.latestShipDate = latestShipDate;
         this.earliestDeliveryDate = earliestDeliveryDate;
         this.latestDeliveryDate = latestDeliveryDate;
-    }
+        this.isBusinessOrder = isBusinessOrder;
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        this.isPrime = isPrime;
+        this.isPremiumOrder = isPremiumOrder;
+    }    
+    
 
     /** Default constructor. */
     public Order() {
         super();
     }
 
-}
+/** Value constructor. */
+    public Order(String amazonOrderId,String sellerOrderId,XMLGregorianCalendar purchaseDate,XMLGregorianCalendar lastUpdateDate,String orderStatus,String fulfillmentChannel,String salesChannel,String orderChannel,String shipServiceLevel,Address shippingAddress,Money orderTotal,Integer numberOfItemsShipped,Integer numberOfItemsUnshipped,List<PaymentExecutionDetailItem> paymentExecutionDetail,String paymentMethod,String marketplaceId,String buyerEmail,String buyerName,String shipmentServiceLevelCategory,Boolean shippedByAmazonTFM,String tfmShipmentStatus,String cbaDisplayableShippingLabel,String orderType,XMLGregorianCalendar earliestShipDate,XMLGregorianCalendar latestShipDate,XMLGregorianCalendar earliestDeliveryDate,XMLGregorianCalendar latestDeliveryDate,Boolean isBusinessOrder,String purchaseOrderNumber,Boolean isPrime) {
+        this.amazonOrderId = amazonOrderId;
+        this.sellerOrderId = sellerOrderId;
+        this.purchaseDate = purchaseDate;
+        this.lastUpdateDate = lastUpdateDate;
+        this.orderStatus = orderStatus;
+        this.fulfillmentChannel = fulfillmentChannel;
+        this.salesChannel = salesChannel;
+        this.orderChannel = orderChannel;
+        this.shipServiceLevel = shipServiceLevel;
+        this.shippingAddress = shippingAddress;
+        this.orderTotal = orderTotal;
+        this.numberOfItemsShipped = numberOfItemsShipped;
+        this.numberOfItemsUnshipped = numberOfItemsUnshipped;
+        this.paymentExecutionDetail = paymentExecutionDetail;
+        this.paymentMethod = paymentMethod;
+        this.marketplaceId = marketplaceId;
+        this.buyerEmail = buyerEmail;
+        this.buyerName = buyerName;
+        this.shipmentServiceLevelCategory = shipmentServiceLevelCategory;
+        this.shippedByAmazonTFM = shippedByAmazonTFM;
+        this.tfmShipmentStatus = tfmShipmentStatus;
+        this.cbaDisplayableShippingLabel = cbaDisplayableShippingLabel;
+        this.orderType = orderType;
+        this.earliestShipDate = earliestShipDate;
+        this.latestShipDate = latestShipDate;
+        this.earliestDeliveryDate = earliestDeliveryDate;
+        this.latestDeliveryDate = latestDeliveryDate;
+        this.isBusinessOrder = isBusinessOrder;
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        this.isPrime = isPrime;
+    }
+
+    }

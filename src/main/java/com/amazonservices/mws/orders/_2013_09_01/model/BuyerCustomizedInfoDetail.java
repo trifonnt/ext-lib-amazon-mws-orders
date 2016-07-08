@@ -8,7 +8,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
- * Response Metadata
+ * Buyer Customized Info Detail
  * API Version: 2013-09-01
  * Library Version: 2015-09-24
  * Generated: Fri Sep 25 20:06:20 GMT 2015
@@ -18,64 +18,64 @@ package com.amazonservices.mws.orders._2013_09_01.model;
 import com.amazonservices.mws.client.*;
 
 /**
- * ResponseMetadata complex type.
+ * BuyerCustomizedInfoDetail complex type.
  *
  * XML schema:
  *
  * <pre>
- * &lt;complexType name="ResponseMetadata"&gt;
+ * &lt;complexType name="BuyerCustomizedInfoDetail"&gt;
  *    &lt;complexContent&gt;
  *       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *          &lt;sequence&gt;
- *             &lt;element name="RequestId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *             &lt;element name="CustomizedURL" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *          &lt;/sequence&gt;
  *       &lt;/restriction&gt;
  *    &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
  */
-public class ResponseMetadata extends AbstractMwsObject {
+public class BuyerCustomizedInfoDetail extends AbstractMwsObject {
 
-    private String requestId;
+    private String customizedURL;
 
     /**
-     * Get the value of RequestId.
+     * Get the value of CustomizedURL.
      *
-     * @return The value of RequestId.
+     * @return The value of CustomizedURL.
      */
-    public String getRequestId() {
-        return requestId;
+    public String getCustomizedURL() {
+        return customizedURL;
     }
 
     /**
-     * Set the value of RequestId.
+     * Set the value of CustomizedURL.
      *
-     * @param requestId
+     * @param customizedURL
      *            The new value to set.
      */
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
+    public void setCustomizedURL(String customizedURL) {
+        this.customizedURL = customizedURL;
     }
 
     /**
-     * Check to see if RequestId is set.
+     * Check to see if CustomizedURL is set.
      *
-     * @return true if RequestId is set.
+     * @return true if CustomizedURL is set.
      */
-    public boolean isSetRequestId() {
-        return requestId != null;
+    public boolean isSetCustomizedURL() {
+        return customizedURL != null;
     }
 
     /**
-     * Set the value of RequestId, return this.
+     * Set the value of CustomizedURL, return this.
      *
-     * @param requestId
+     * @param customizedURL
      *             The new value to set.
      *
      * @return This instance.
      */
-    public ResponseMetadata withRequestId(String requestId) {
-        this.requestId = requestId;
+    public BuyerCustomizedInfoDetail withCustomizedURL(String customizedURL) {
+        this.customizedURL = customizedURL;
         return this;
     }
 
@@ -87,7 +87,7 @@ public class ResponseMetadata extends AbstractMwsObject {
      */
     @Override
     public void readFragmentFrom(MwsReader r) {
-        requestId = r.read("RequestId", String.class);
+        customizedURL = r.read("CustomizedURL", String.class);
     }
 
     /**
@@ -98,7 +98,7 @@ public class ResponseMetadata extends AbstractMwsObject {
      */
     @Override
     public void writeFragmentTo(MwsWriter w) {
-        w.write("RequestId", requestId);
+        w.write("CustomizedURL", customizedURL);
     }
 
     /**
@@ -109,17 +109,17 @@ public class ResponseMetadata extends AbstractMwsObject {
      */
     @Override
     public void writeTo(MwsWriter w) {
-        w.write("https://mws.amazonservices.com/Orders/2013-09-01", "ResponseMetadata",this);
+        w.write("https://mws.amazonservices.com/Orders/2013-09-01", "BuyerCustomizedInfoDetail",this);
     }
 
     /** Value constructor. */
-    public ResponseMetadata(String requestId) {
-        this.requestId = requestId;
+    public BuyerCustomizedInfoDetail(String customizedURL) {
+        this.customizedURL = customizedURL;
     }    
     
 
     /** Default constructor. */
-    public ResponseMetadata() {
+    public BuyerCustomizedInfoDetail() {
         super();
     }
 

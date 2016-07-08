@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * Marketplace Web Service Orders
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01;
 
@@ -22,7 +22,7 @@ public class MarketplaceWebServiceOrdersClient implements MarketplaceWebServiceO
 
     private static final String libraryName = "MarketplaceWebServiceOrders";
 
-    private static final String libraryVersion = "2013-09-01";
+    private static final String libraryVersion = "2015-09-24";
 
     protected String servicePath;
 
@@ -147,45 +147,6 @@ public class MarketplaceWebServiceOrdersClient implements MarketplaceWebServiceO
         public void setRHMD(MwsObject response, MwsResponseHeaderMetadata rhmd) {
             ((MWSResponse)response).setResponseHeaderMetadata(new ResponseHeaderMetadata(rhmd));
         }
-
-        @Override
-        public int hashCode() {
-          final int prime = 31;
-          int result = 1;
-          result = prime * result + ((operationName == null) ? 0 : operationName.hashCode());
-          result = prime * result + ((responseClass == null) ? 0 : responseClass.hashCode());
-          result = prime * result + ((servicePath == null) ? 0 : servicePath.hashCode());
-          return result;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-          if (this == obj)
-            return true;
-          if (obj == null)
-            return false;
-          if (getClass() != obj.getClass())
-            return false;
-          RequestType other = (RequestType) obj;
-          if (operationName == null) {
-            if (other.operationName != null)
-              return false;
-          } else if (!operationName.equals(other.operationName))
-            return false;
-          if (responseClass == null) {
-            if (other.responseClass != null)
-              return false;
-          } else if (!responseClass.equals(other.responseClass))
-            return false;
-          if (servicePath == null) {
-            if (other.servicePath != null)
-              return false;
-          } else if (!servicePath.equals(other.servicePath))
-            return false;
-          return true;
-        }
-        
-        
     }
 
 }

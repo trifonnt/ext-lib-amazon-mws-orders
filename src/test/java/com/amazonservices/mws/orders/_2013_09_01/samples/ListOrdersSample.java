@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * Marketplace Web Service Orders
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01.samples;
 
@@ -78,6 +78,8 @@ public class ListOrdersSample {
         ListOrdersRequest request = new ListOrdersRequest();
         String sellerId = "example";
         request.setSellerId(sellerId);
+        String mwsAuthToken = "example";
+        request.setMWSAuthToken(mwsAuthToken);
         XMLGregorianCalendar createdAfter = MwsUtl.getDTF().newXMLGregorianCalendar();
         request.setCreatedAfter(createdAfter);
         XMLGregorianCalendar createdBefore = MwsUtl.getDTF().newXMLGregorianCalendar();

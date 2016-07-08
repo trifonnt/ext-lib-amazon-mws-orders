@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * List Order Items Request
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01.model;
 
@@ -28,6 +28,7 @@ import com.amazonservices.mws.client.*;
  *       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *          &lt;sequence&gt;
  *             &lt;element name="SellerId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *             &lt;element name="MWSAuthToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *             &lt;element name="AmazonOrderId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *          &lt;/sequence&gt;
  *       &lt;/restriction&gt;
@@ -38,6 +39,8 @@ import com.amazonservices.mws.client.*;
 public class ListOrderItemsRequest extends AbstractMwsObject {
 
     private String sellerId;
+
+    private String mwsAuthToken;
 
     private String amazonOrderId;
 
@@ -79,6 +82,47 @@ public class ListOrderItemsRequest extends AbstractMwsObject {
      */
     public ListOrderItemsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
+        return this;
+    }
+
+    /**
+     * Get the value of MWSAuthToken.
+     *
+     * @return The value of MWSAuthToken.
+     */
+    public String getMWSAuthToken() {
+        return mwsAuthToken;
+    }
+
+    /**
+     * Set the value of MWSAuthToken.
+     *
+     * @param mwsAuthToken
+     *            The new value to set.
+     */
+    public void setMWSAuthToken(String mwsAuthToken) {
+        this.mwsAuthToken = mwsAuthToken;
+    }
+
+    /**
+     * Check to see if MWSAuthToken is set.
+     *
+     * @return true if MWSAuthToken is set.
+     */
+    public boolean isSetMWSAuthToken() {
+        return mwsAuthToken != null;
+    }
+
+    /**
+     * Set the value of MWSAuthToken, return this.
+     *
+     * @param mwsAuthToken
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public ListOrderItemsRequest withMWSAuthToken(String mwsAuthToken) {
+        this.mwsAuthToken = mwsAuthToken;
         return this;
     }
 
@@ -132,6 +176,7 @@ public class ListOrderItemsRequest extends AbstractMwsObject {
     @Override
     public void readFragmentFrom(MwsReader r) {
         sellerId = r.read("SellerId", String.class);
+        mwsAuthToken = r.read("MWSAuthToken", String.class);
         amazonOrderId = r.read("AmazonOrderId", String.class);
     }
 
@@ -144,6 +189,7 @@ public class ListOrderItemsRequest extends AbstractMwsObject {
     @Override
     public void writeFragmentTo(MwsWriter w) {
         w.write("SellerId", sellerId);
+        w.write("MWSAuthToken", mwsAuthToken);
         w.write("AmazonOrderId", amazonOrderId);
     }
 
@@ -159,10 +205,18 @@ public class ListOrderItemsRequest extends AbstractMwsObject {
     }
 
     /** Value constructor. */
+    public ListOrderItemsRequest(String sellerId,String mwsAuthToken,String amazonOrderId) {
+        this.sellerId = sellerId;
+        this.mwsAuthToken = mwsAuthToken;
+        this.amazonOrderId = amazonOrderId;
+    }    
+
+    /** Legacy value constructor. */
     public ListOrderItemsRequest(String sellerId,String amazonOrderId) {
         this.sellerId = sellerId;
         this.amazonOrderId = amazonOrderId;
     }
+    
 
     /** Default constructor. */
     public ListOrderItemsRequest() {

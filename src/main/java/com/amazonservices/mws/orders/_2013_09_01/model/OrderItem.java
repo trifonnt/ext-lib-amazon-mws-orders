@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -10,8 +10,8 @@
  *******************************************************************************
  * Order Item
  * API Version: 2013-09-01
- * Library Version: 2013-09-01
- * Generated: Thu Feb 06 16:04:52 GMT 2014
+ * Library Version: 2015-09-24
+ * Generated: Fri Sep 25 20:06:20 GMT 2015
  */
 package com.amazonservices.mws.orders._2013_09_01.model;
 
@@ -36,6 +36,7 @@ import com.amazonservices.mws.client.*;
  *             &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *             &lt;element name="QuantityOrdered" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *             &lt;element name="QuantityShipped" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *             &lt;element name="PointsGranted" type="{https://mws.amazonservices.com/Orders/2013-09-01}PointsGrantedDetail" minOccurs="0"/&gt;
  *             &lt;element name="ItemPrice" type="{https://mws.amazonservices.com/Orders/2013-09-01}Money" minOccurs="0"/&gt;
  *             &lt;element name="ShippingPrice" type="{https://mws.amazonservices.com/Orders/2013-09-01}Money" minOccurs="0"/&gt;
  *             &lt;element name="GiftWrapPrice" type="{https://mws.amazonservices.com/Orders/2013-09-01}Money" minOccurs="0"/&gt;
@@ -55,6 +56,8 @@ import com.amazonservices.mws.client.*;
  *             &lt;element name="ConditionSubtypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *             &lt;element name="ScheduledDeliveryStartDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *             &lt;element name="ScheduledDeliveryEndDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *             &lt;element name="PriceDesignation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *             &lt;element name="BuyerCustomizedInfo" type="{https://mws.amazonservices.com/Orders/2013-09-01}BuyerCustomizedInfoDetail" minOccurs="0"/&gt;
  *          &lt;/sequence&gt;
  *       &lt;/restriction&gt;
  *    &lt;/complexContent&gt;
@@ -74,6 +77,8 @@ public class OrderItem extends AbstractMwsObject {
     private int quantityOrdered;
 
     private Integer quantityShipped;
+
+    private PointsGrantedDetail pointsGranted;
 
     private Money itemPrice;
 
@@ -112,6 +117,10 @@ public class OrderItem extends AbstractMwsObject {
     private String scheduledDeliveryStartDate;
 
     private String scheduledDeliveryEndDate;
+
+    private String priceDesignation;
+
+    private BuyerCustomizedInfoDetail buyerCustomizedInfo;
 
     /**
      * Get the value of ASIN.
@@ -347,6 +356,47 @@ public class OrderItem extends AbstractMwsObject {
      */
     public OrderItem withQuantityShipped(Integer quantityShipped) {
         this.quantityShipped = quantityShipped;
+        return this;
+    }
+
+    /**
+     * Get the value of PointsGranted.
+     *
+     * @return The value of PointsGranted.
+     */
+    public PointsGrantedDetail getPointsGranted() {
+        return pointsGranted;
+    }
+
+    /**
+     * Set the value of PointsGranted.
+     *
+     * @param pointsGranted
+     *            The new value to set.
+     */
+    public void setPointsGranted(PointsGrantedDetail pointsGranted) {
+        this.pointsGranted = pointsGranted;
+    }
+
+    /**
+     * Check to see if PointsGranted is set.
+     *
+     * @return true if PointsGranted is set.
+     */
+    public boolean isSetPointsGranted() {
+        return pointsGranted != null;
+    }
+
+    /**
+     * Set the value of PointsGranted, return this.
+     *
+     * @param pointsGranted
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public OrderItem withPointsGranted(PointsGrantedDetail pointsGranted) {
+        this.pointsGranted = pointsGranted;
         return this;
     }
 
@@ -1143,6 +1193,88 @@ public class OrderItem extends AbstractMwsObject {
     }
 
     /**
+     * Get the value of PriceDesignation.
+     *
+     * @return The value of PriceDesignation.
+     */
+    public String getPriceDesignation() {
+        return priceDesignation;
+    }
+
+    /**
+     * Set the value of PriceDesignation.
+     *
+     * @param priceDesignation
+     *            The new value to set.
+     */
+    public void setPriceDesignation(String priceDesignation) {
+        this.priceDesignation = priceDesignation;
+    }
+
+    /**
+     * Check to see if PriceDesignation is set.
+     *
+     * @return true if PriceDesignation is set.
+     */
+    public boolean isSetPriceDesignation() {
+        return priceDesignation != null;
+    }
+
+    /**
+     * Set the value of PriceDesignation, return this.
+     *
+     * @param priceDesignation
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public OrderItem withPriceDesignation(String priceDesignation) {
+        this.priceDesignation = priceDesignation;
+        return this;
+    }
+
+    /**
+     * Get the value of BuyerCustomizedInfo.
+     *
+     * @return The value of BuyerCustomizedInfo.
+     */
+    public BuyerCustomizedInfoDetail getBuyerCustomizedInfo() {
+        return buyerCustomizedInfo;
+    }
+
+    /**
+     * Set the value of BuyerCustomizedInfo.
+     *
+     * @param buyerCustomizedInfo
+     *            The new value to set.
+     */
+    public void setBuyerCustomizedInfo(BuyerCustomizedInfoDetail buyerCustomizedInfo) {
+        this.buyerCustomizedInfo = buyerCustomizedInfo;
+    }
+
+    /**
+     * Check to see if BuyerCustomizedInfo is set.
+     *
+     * @return true if BuyerCustomizedInfo is set.
+     */
+    public boolean isSetBuyerCustomizedInfo() {
+        return buyerCustomizedInfo != null;
+    }
+
+    /**
+     * Set the value of BuyerCustomizedInfo, return this.
+     *
+     * @param buyerCustomizedInfo
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public OrderItem withBuyerCustomizedInfo(BuyerCustomizedInfoDetail buyerCustomizedInfo) {
+        this.buyerCustomizedInfo = buyerCustomizedInfo;
+        return this;
+    }
+
+    /**
      * Read members from a MwsReader.
      *
      * @param r
@@ -1156,6 +1288,7 @@ public class OrderItem extends AbstractMwsObject {
         title = r.read("Title", String.class);
         quantityOrdered = r.read("QuantityOrdered", int.class);
         quantityShipped = r.read("QuantityShipped", Integer.class);
+        pointsGranted = r.read("PointsGranted", PointsGrantedDetail.class);
         itemPrice = r.read("ItemPrice", Money.class);
         shippingPrice = r.read("ShippingPrice", Money.class);
         giftWrapPrice = r.read("GiftWrapPrice", Money.class);
@@ -1175,6 +1308,8 @@ public class OrderItem extends AbstractMwsObject {
         conditionSubtypeId = r.read("ConditionSubtypeId", String.class);
         scheduledDeliveryStartDate = r.read("ScheduledDeliveryStartDate", String.class);
         scheduledDeliveryEndDate = r.read("ScheduledDeliveryEndDate", String.class);
+        priceDesignation = r.read("PriceDesignation", String.class);
+        buyerCustomizedInfo = r.read("BuyerCustomizedInfo", BuyerCustomizedInfoDetail.class);
     }
 
     /**
@@ -1191,6 +1326,7 @@ public class OrderItem extends AbstractMwsObject {
         w.write("Title", title);
         w.write("QuantityOrdered", quantityOrdered);
         w.write("QuantityShipped", quantityShipped);
+        w.write("PointsGranted", pointsGranted);
         w.write("ItemPrice", itemPrice);
         w.write("ShippingPrice", shippingPrice);
         w.write("GiftWrapPrice", giftWrapPrice);
@@ -1210,6 +1346,8 @@ public class OrderItem extends AbstractMwsObject {
         w.write("ConditionSubtypeId", conditionSubtypeId);
         w.write("ScheduledDeliveryStartDate", scheduledDeliveryStartDate);
         w.write("ScheduledDeliveryEndDate", scheduledDeliveryEndDate);
+        w.write("PriceDesignation", priceDesignation);
+        w.write("BuyerCustomizedInfo", buyerCustomizedInfo);
     }
 
     /**
@@ -1224,13 +1362,14 @@ public class OrderItem extends AbstractMwsObject {
     }
 
     /** Value constructor. */
-    public OrderItem(String asin,String sellerSKU,String orderItemId,String title,int quantityOrdered,Integer quantityShipped,Money itemPrice,Money shippingPrice,Money giftWrapPrice,Money itemTax,Money shippingTax,Money giftWrapTax,Money shippingDiscount,Money promotionDiscount,List<String> promotionIds,Money codFee,Money codFeeDiscount,String giftMessageText,String giftWrapLevel,InvoiceData invoiceData,String conditionNote,String conditionId,String conditionSubtypeId,String scheduledDeliveryStartDate,String scheduledDeliveryEndDate) {
+    public OrderItem(String asin,String sellerSKU,String orderItemId,String title,int quantityOrdered,Integer quantityShipped,PointsGrantedDetail pointsGranted,Money itemPrice,Money shippingPrice,Money giftWrapPrice,Money itemTax,Money shippingTax,Money giftWrapTax,Money shippingDiscount,Money promotionDiscount,List<String> promotionIds,Money codFee,Money codFeeDiscount,String giftMessageText,String giftWrapLevel,InvoiceData invoiceData,String conditionNote,String conditionId,String conditionSubtypeId,String scheduledDeliveryStartDate,String scheduledDeliveryEndDate,String priceDesignation,BuyerCustomizedInfoDetail buyerCustomizedInfo) {
         this.asin = asin;
         this.sellerSKU = sellerSKU;
         this.orderItemId = orderItemId;
         this.title = title;
         this.quantityOrdered = quantityOrdered;
         this.quantityShipped = quantityShipped;
+        this.pointsGranted = pointsGranted;
         this.itemPrice = itemPrice;
         this.shippingPrice = shippingPrice;
         this.giftWrapPrice = giftWrapPrice;
@@ -1250,11 +1389,45 @@ public class OrderItem extends AbstractMwsObject {
         this.conditionSubtypeId = conditionSubtypeId;
         this.scheduledDeliveryStartDate = scheduledDeliveryStartDate;
         this.scheduledDeliveryEndDate = scheduledDeliveryEndDate;
-    }
+        this.priceDesignation = priceDesignation;
+        this.buyerCustomizedInfo = buyerCustomizedInfo;
+    }    
+    
 
     /** Default constructor. */
     public OrderItem() {
         super();
     }
 
-}
+/** Value constructor. */
+    public OrderItem(String asin,String sellerSKU,String orderItemId,String title,int quantityOrdered,Integer quantityShipped,PointsGrantedDetail pointsGranted,Money itemPrice,Money shippingPrice,Money giftWrapPrice,Money itemTax,Money shippingTax,Money giftWrapTax,Money shippingDiscount,Money promotionDiscount,List<String> promotionIds,Money codFee,Money codFeeDiscount,String giftMessageText,String giftWrapLevel,InvoiceData invoiceData,String conditionNote,String conditionId,String conditionSubtypeId,String scheduledDeliveryStartDate,String scheduledDeliveryEndDate,String priceDesignation) {
+        this.asin = asin;
+        this.sellerSKU = sellerSKU;
+        this.orderItemId = orderItemId;
+        this.title = title;
+        this.quantityOrdered = quantityOrdered;
+        this.quantityShipped = quantityShipped;
+        this.pointsGranted = pointsGranted;
+        this.itemPrice = itemPrice;
+        this.shippingPrice = shippingPrice;
+        this.giftWrapPrice = giftWrapPrice;
+        this.itemTax = itemTax;
+        this.shippingTax = shippingTax;
+        this.giftWrapTax = giftWrapTax;
+        this.shippingDiscount = shippingDiscount;
+        this.promotionDiscount = promotionDiscount;
+        this.promotionIds = promotionIds;
+        this.codFee = codFee;
+        this.codFeeDiscount = codFeeDiscount;
+        this.giftMessageText = giftMessageText;
+        this.giftWrapLevel = giftWrapLevel;
+        this.invoiceData = invoiceData;
+        this.conditionNote = conditionNote;
+        this.conditionId = conditionId;
+        this.conditionSubtypeId = conditionSubtypeId;
+        this.scheduledDeliveryStartDate = scheduledDeliveryStartDate;
+        this.scheduledDeliveryEndDate = scheduledDeliveryEndDate;
+        this.priceDesignation = priceDesignation;
+    }
+
+    }
