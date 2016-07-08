@@ -22,11 +22,11 @@ Refers only to the [MWSOrdersJavaClientLibrary-2013-09-01.zip](https://images-na
 Prerequisites
 =============================================================================== 
 
-Amazon Pro Merchant seller account or another Amazon account that makes you eligible to use Amazon Marketplace Web Service (Amazon MWS). For more information, see the Amazon MWS FAQ.
+- Amazon Pro Merchant seller account or another Amazon account that makes you eligible to use Amazon Marketplace Web Service (Amazon MWS). For more information, see the Amazon MWS FAQ.
 
-Registering for Amazon MWS. For more information see the Amazon MWS FAQ.
+- Registering for Amazon MWS. For more information see the Amazon MWS FAQ.
 
-Java Platform Standard Edition 6.0 Development Kit (JDK 1.6.0_19) or newer. If your version of the JDK is older than 6.0, you must install the newer version. For more information, go to the Java SE Downloads page. 
+- Java Platform Standard Edition 6.0 Development Kit (JDK 1.6.0_19) or newer. If your version of the JDK is older than 6.0, you must install the newer version. For more information, go to the Java SE Downloads page. 
 
 
 Licensing
