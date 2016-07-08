@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master)](https://travis-ci.org/integration-technology/amazon-mws-orders)
 
-Amazon MWS Orders API Section Client Library - Java - Version 2013-09-01
+Amazon MWS :: Orders API Section Client Library - Java - Version 2013-09-01
 =============================================================================== 
-The project is mavenised unofficial copy of is based on Java library provided by 
+The project is mavenised unofficial copy of Java library provided by 
 Amazon for dealing with Amazon Marketplace Web Service API.
 
-https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html/179-9231744-2258918
-http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html
+https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
+http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.htlm
 
 Current CI status: https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master
 
@@ -14,7 +14,7 @@ About this Library
 =============================================================================== 
 
 Based on the 2013-09-01 API version.
-Refers only to the MWSOrdersJavaClientLibrary-2013-09-01.zip file.
+Refers only to the [MWSOrdersJavaClientLibrary-2013-09-01.zip](https://images-na.ssl-images-amazon.com/images/G/01/mwsportal/clientlib/Orders/2013-09-01/MWSOrdersJavaClientLibrary-2013-09-01._V293334172_.zip) file.
 
 Prerequisites
 =============================================================================== 
