@@ -9,7 +9,7 @@ https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
 
 http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.htlm
 
-Current CI status: https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master
+Current CI status: https://travis-ci.org/integration-technology/amazon-mws-orders
 
 About this Library
 =============================================================================== 
