@@ -6,6 +6,7 @@ The project is mavenised unofficial copy of Java library provided by
 Amazon for dealing with Amazon Marketplace Web Service API.
 
 https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
+
 http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.htlm
 
 Current CI status: https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master
