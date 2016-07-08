@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master)](https://travis-ci.org/integration-technology/amazon-mws-orders)
 
-Amazon MWS(Marketplace Web Service) Orders Java Library - Version 2013-09-01
+Amazon MWS(Marketplace Web Service) Orders Java Library - Version 2013-09-01.V293334172
 =============================================================================== 
 The project is mavenised unofficial copy of Java library provided by 
 Amazon for dealing with Amazon Marketplace Web Service API.
