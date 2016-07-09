@@ -9,7 +9,7 @@ https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
 
 http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.htlm
 
-Current CI status: https://travis-ci.org/integration-technology/amazon-mws-orders
+Current CI status: https://travis-ci.org/trifonnt/amazon-mws-orders
 
 
 About this Library
@@ -29,7 +29,7 @@ Prerequisites
 - Java Platform Standard Edition 6.0 Development Kit (JDK 1.6.0_19) or newer. If your version of the JDK is older than 6.0, you must install the newer version. For more information, go to the Java SE Downloads page. 
 
 
-Building when migrating to new Amazon MWS Order library version
+Building when migrating to new Amazon MWS Orders library version
 ===============================================================================
 
 ```shell
