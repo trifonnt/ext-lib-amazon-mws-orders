@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/integration-technology/amazon-mws-orders.png?branch=master)](https://travis-ci.org/integration-technology/amazon-mws-orders)
+[![Build Status](https://travis-ci.org/trifonnt/amazon-mws-orders.png?branch=master)](https://travis-ci.org/trifonnt/amazon-mws-orders)
 
 Amazon MWS(Marketplace Web Service) Orders Java Library - Version 2013-09-01.V293334172
 =============================================================================== 
