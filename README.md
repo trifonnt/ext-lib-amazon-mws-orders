@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/trifonnt/amazon-mws-orders.png?branch=master)](https://travis-ci.org/trifonnt/amazon-mws-orders)
+[![Build Status](https://travis-ci.org/trifonnt/ext-lib-amazon-mws-orders.png?branch=master)](https://travis-ci.org/trifonnt/ext-lib-amazon-mws-orders)
+[![](https://jitpack.io/v/trifonnt/ext-lib-amazon-mws-orders.svg)](https://jitpack.io/#trifonnt/ext-lib-amazon-mws-orders)
+
 
 Amazon MWS(Marketplace Web Service) Orders Java Library - Version 2013-09-01.V293334172
 =============================================================================== 
@@ -7,9 +9,9 @@ Amazon for dealing with Amazon Marketplace Web Service API.
 
 https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
 
-http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.htlm
+http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html
 
-Current CI status: https://travis-ci.org/trifonnt/amazon-mws-orders
+Current CI status: https://travis-ci.org/trifonnt/ext-lib-amazon-mws-orders
 
 
 About this Library
@@ -33,9 +35,9 @@ Building when migrating to new Amazon MWS Orders library version
 ===============================================================================
 
 ```shell
-$ git clone https://github.com/trifonnt/amazon-mws-orders.git
+$ git clone https://github.com/trifonnt/ext-lib-amazon-mws-orders.git
 
-$ cd amazon-mws-orders
+$ cd ext-lib-amazon-mws-orders
 
 $ mkdir orig-library
 
@@ -57,16 +59,36 @@ $ mv src/com/amazonservices/mws/orders/_2013_09_01/*.java ../src/main/java/com/a
 $ mv src/com/amazonservices/mws/orders/_2013_09_01/model/*.java ../src/main/java/com/amazonservices/mws/orders/_2013_09_01/model
 $ rm -r src/com/amazonservices/mws/orders/_2013_09_01/model
 
-$ mv runtime-src/com/amazonservices/mws/client/*.java ../src/main/java/com/amazonservices/mws/client
+
+$ mvn clean install -Dmaven.javadoc.skip=true
+
+```
 
 
-$ mvn clean install -Dmaven.javadoc.skip=true -DskipTests=true
+Publishing to JitPack
+===============================================================================
 
+ - Create new Release in GitHub
+
+
+ - Open below URL in order to start JitPack build process
+
+```shell
+https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.3
 ```
 
 
 Licensing
 =============================================================================== 
 
-This software is licensed under the terms you may find in the file
-named "LICENSE.txt" in this directory.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
