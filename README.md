@@ -60,7 +60,7 @@ $ mv src/com/amazonservices/mws/orders/_2013_09_01/model/*.java ../src/main/java
 $ rm -r src/com/amazonservices/mws/orders/_2013_09_01/model
 
 
-$ mvn clean install -Dmaven.javadoc.skip=true
+$ mvn clean install -Dmaven.javadoc.skip=true -DskipTests=true
 
 ```
 
@@ -74,7 +74,7 @@ Publishing to JitPack
  - Open below URL in order to start JitPack build process
 
 ```shell
-https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.3
+https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.4
 ```
 
 
