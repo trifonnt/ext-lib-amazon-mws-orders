@@ -369,7 +369,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     /**
      * Add values for OrderStatus, return this.
      *
-     * @param orderStatus
+     * @param values
      *             New values to add.
      *
      * @return This instance.
@@ -423,7 +423,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     /**
      * Add values for MarketplaceId, return this.
      *
-     * @param marketplaceId
+     * @param values
      *             New values to add.
      *
      * @return This instance.
@@ -477,7 +477,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     /**
      * Add values for FulfillmentChannel, return this.
      *
-     * @param fulfillmentChannel
+     * @param values
      *             New values to add.
      *
      * @return This instance.
@@ -531,7 +531,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     /**
      * Add values for PaymentMethod, return this.
      *
-     * @param paymentMethod
+     * @param values
      *             New values to add.
      *
      * @return This instance.
@@ -708,7 +708,7 @@ public class ListOrdersRequest extends AbstractMwsObject {
     /**
      * Add values for TFMShipmentStatus, return this.
      *
-     * @param tfmShipmentStatus
+     * @param values
      *             New values to add.
      *
      * @return This instance.

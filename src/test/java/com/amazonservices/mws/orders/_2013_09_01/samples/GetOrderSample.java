@@ -15,13 +15,15 @@
  */
 package com.amazonservices.mws.orders._2013_09_01.samples;
 
-import java.util.*;
-import javax.xml.datatype.XMLGregorianCalendar;
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.amazonservices.mws.client.*;
-import com.amazonservices.mws.orders._2013_09_01.*;
-import com.amazonservices.mws.orders._2013_09_01.model.*;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrders;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrdersClient;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrdersException;
+import com.amazonservices.mws.orders._2013_09_01.model.GetOrderRequest;
+import com.amazonservices.mws.orders._2013_09_01.model.GetOrderResponse;
+import com.amazonservices.mws.orders._2013_09_01.model.ResponseHeaderMetadata;
 
 
 /** Sample call for GetOrder. */

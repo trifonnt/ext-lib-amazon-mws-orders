@@ -15,14 +15,17 @@
  */
 package com.amazonservices.mws.orders._2013_09_01.samples;
 
-import java.util.*;
-import java.util.concurrent.*;
-import javax.xml.datatype.XMLGregorianCalendar;
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
-import com.amazonservices.mws.client.*;
-import com.amazonservices.mws.orders._2013_09_01.*;
-import com.amazonservices.mws.orders._2013_09_01.model.*;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrdersAsync;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrdersAsyncClient;
+import com.amazonservices.mws.orders._2013_09_01.MarketplaceWebServiceOrdersException;
+import com.amazonservices.mws.orders._2013_09_01.model.ListOrdersByNextTokenRequest;
+import com.amazonservices.mws.orders._2013_09_01.model.ListOrdersByNextTokenResponse;
+import com.amazonservices.mws.orders._2013_09_01.model.ResponseHeaderMetadata;
 
 /** Sample async call for ListOrdersByNextToken. */
 public class ListOrdersByNextTokenAsyncSample {
@@ -31,7 +34,7 @@ public class ListOrdersByNextTokenAsyncSample {
      * Call the service, log response and exceptions.
      *
      * @param client
-     * @param request
+     * @param requestList
      *
      * @return The response.
      */

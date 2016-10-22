@@ -170,7 +170,7 @@ public class GetOrderRequest extends AbstractMwsObject {
     /**
      * Add values for AmazonOrderId, return this.
      *
-     * @param amazonOrderId
+     * @param values
      *             New values to add.
      *
      * @return This instance.
