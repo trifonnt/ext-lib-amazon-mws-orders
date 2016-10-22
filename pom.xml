@@ -14,7 +14,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -31,6 +32,30 @@ limitations under the License.
 	<name>Amazon MWS :: Orders</name>
 	<description>Amazon MWS Orders API Client Library</description>
 	<url>http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html</url>
+
+	<properties>
+		<!-- Unify the encoding for all modules -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<jdk.version>1.6</jdk.version>
+		<compiler.fork>1.6</compiler.fork>
+
+		<!-- 
+		  Turning off doclint in JDK 8 Javadoc
+		- http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
+		-->
+		<additionalparam>-Xdoclint:none</additionalparam>
+
+		<amazon-mws-client-runtime-version>1.0.1</amazon-mws-client-runtime-version>
+		<maven-bundle-version>2.3.7</maven-bundle-version>
+		<commons-codec-version>1.6</commons-codec-version>
+		<commons-logging-version>1.1</commons-logging-version>
+		<org-apache-httpcomponents-version>4.2.3</org-apache-httpcomponents-version>
+
+		<mockito-version>1.9.5</mockito-version>
+		<junit-version>4.11</junit-version>
+	</properties>
 
 	<licenses>
 		<license>
@@ -65,39 +90,13 @@ limitations under the License.
 
 	<scm>
 		<connection>scm:git:git@github.com:trifonnt/ext-lib-amazon-mws-orders.git</connection>
-		<developerConnection>scm:git:ssh@github.com:trifonnt/ext-lib-amazon-mws-orders.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:trifonnt/ext-lib-amazon-mws-orders.git</developerConnection>
 		<url>https://github.com/trifonnt/ext-lib-amazon-mws-orders/tree/master</url>
 	</scm>
 
 	<prerequisites>
 		<maven>3.0.2</maven>
 	</prerequisites>
-
-	<properties>
-		<!-- Unify the encoding for all modules -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<jdk.version>1.6</jdk.version>
-		<compiler.fork>1.6</compiler.fork>
-
-		<amazon-mws-client-runtime-version>1.0.1</amazon-mws-client-runtime-version>
-		<maven-bundle-version>2.3.7</maven-bundle-version>
-		<commons-codec-version>1.6</commons-codec-version>
-		<commons-logging-version>1.1</commons-logging-version>
-		<org-apache-httpcomponents-version>4.2.3</org-apache-httpcomponents-version>
-
-		<mockito-version>1.9.5</mockito-version>
-		<junit-version>4.11</junit-version>
-	</properties>
-
-	<distributionManagement>
-		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-repo</url>
-		</repository>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -264,7 +263,6 @@ limitations under the License.
 		</plugins>
 	</build>
 
-
 	<repositories>
 		<repository>
 			<id>jitpack.io</id>
@@ -299,5 +297,43 @@ limitations under the License.
 				</plugins>
 			</build>
 		</profile>
+
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
+
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
+		</repository>
+	</distributionManagement>
 </project>
