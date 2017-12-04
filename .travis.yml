@@ -6,7 +6,7 @@ before_deploy:
       - git tag "$(date +'%Y.%m.%d-%H%:M')-$(git log --format=%h -1)"
     deploy:
       provider: releases
-      api_key: "GITHUB OAUTH TOKEN"
+      api_key: $GITHUB_API_KEY
       file_glob: true
       file: directory/ext-lib-amazon-mws-orders*
       skip_cleanup: true
