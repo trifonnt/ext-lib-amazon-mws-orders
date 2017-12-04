@@ -10,3 +10,7 @@ deploy:
   file_glob: true
   file: target/ext-lib-amazon-mws-orders*
   skip_cleanup: true
+  on:
+    repo: trifonnt/ext-lib-amazon-mws-orders
+    tags: true
+    all_branches: true
