@@ -74,7 +74,7 @@ Publishing to JitPack
  - Open below URL in order to start JitPack build process
 
 ```shell
-https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.4
+https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.5
 ```
 
 
