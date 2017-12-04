@@ -113,7 +113,34 @@ public class MarketplaceWebServiceOrdersClient implements MarketplaceWebServiceO
 
     protected static class RequestType implements MwsRequestType {
 
-        private final String operationName;
+    	// @Trifon-BEGIN
+        @Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((operationName == null) ? 0 : operationName.hashCode());
+			return result;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			RequestType other = (RequestType) obj;
+			if (operationName == null) {
+				if (other.operationName != null)
+					return false;
+			} else if (!operationName.equals(other.operationName))
+				return false;
+			return true;
+		}
+		// @Trifon-END
+
+		private final String operationName;
         private final Class<? extends MWSResponse> responseClass;
         private final String servicePath;
 
