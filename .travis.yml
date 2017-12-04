@@ -1,12 +1,12 @@
 language: java
 before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.email "travis@travis-ci.org"
-      - git config --local user.name "Travis CI"
-      - git tag "$(date +'%Y.%m.%d-%H%:M')-$(git log --format=%h -1)"
-    deploy:
-      provider: releases
-      api_key: $GITHUB_API_KEY
-      file_glob: true
-      file: directory/ext-lib-amazon-mws-orders*
-      skip_cleanup: true
+  # Set up git user name and tag this commit
+  - git config --local user.email "travis@travis-ci.org"
+  - git config --local user.name "Travis CI"
+  - git tag "$(date +'%Y.%m.%d-%H%:M')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: $GITHUB_API_KEY
+  file_glob: true
+  file: directory/ext-lib-amazon-mws-orders*
+  skip_cleanup: true
