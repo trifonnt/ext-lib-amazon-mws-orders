@@ -4,14 +4,14 @@
 
 Amazon MWS(Marketplace Web Service) Orders Java Library - Version 2013-09-01.V293334172
 =============================================================================== 
-The project is mavenised unofficial copy of Java library provided by 
-Amazon for dealing with Amazon Marketplace Web Service API.
+The project is mavenised unofficial copy of Java library provided by Amazon for dealing with Amazon Marketplace Web Service API.
 
-https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
+ - https://developer.amazonservices.com/doc/orders/orders/v20130901/java.html
 
-http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html
+ - https://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html
 
 Current CI status: https://travis-ci.org/trifonnt/ext-lib-amazon-mws-orders
+
 
 
 About this Library
@@ -24,16 +24,16 @@ Refers only to the [MWSOrdersJavaClientLibrary-2013-09-01.zip](https://images-na
 Prerequisites
 =============================================================================== 
 
-- Amazon Pro Merchant seller account or another Amazon account that makes you eligible to use Amazon Marketplace Web Service (Amazon MWS). For more information, see the Amazon MWS FAQ.
+- Amazon Pro Merchant seller account or another Amazon account that makes you eligible to use Amazon Marketplace Web Service (Amazon MWS). For more information, see the [Amazon MWS FAQ](https://developer.amazonservices.com/gp/mws/faq.html).
 
-- Registering for Amazon MWS. For more information see the Amazon MWS FAQ.
+- Registering for Amazon MWS. For more information see the [Amazon MWS FAQ](https://developer.amazonservices.com/gp/mws/faq.html).
 
 - Java Platform Standard Edition 6.0 Development Kit (JDK 1.6.0_19) or newer. If your version of the JDK is older than 6.0, you must install the newer version. For more information, go to the Java SE Downloads page. 
 
 
-Building when migrating to new Amazon MWS Orders library version
-===============================================================================
+## How to
 
+### Migrate to new version of Amazon MWS Orders library
 ```shell
 $ git clone https://github.com/trifonnt/ext-lib-amazon-mws-orders.git
 
@@ -61,15 +61,11 @@ $ rm -r src/com/amazonservices/mws/orders/_2013_09_01/model
 
 
 $ mvn clean install -Dmaven.javadoc.skip=true -DskipTests=true
-
 ```
 
-
-Publishing to JitPack
-===============================================================================
+### Publish new version to JitPack
 
  - Create new Release in GitHub
-
 
  - Open below URL in order to start JitPack build process
 
@@ -77,6 +73,24 @@ Publishing to JitPack
 https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.5
 ```
 
+### Get this project into your Maven build(pom.xml)
+```xml
+...
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+ ...
+ ...
+ 	<dependency>
+	    <groupId>com.github.trifonnt</groupId>
+	    <artifactId>ext-lib-amazon-mws-orders</artifactId>
+	    <version>1.0.0</version>
+	</dependency>
+...
+```
 
 Licensing
 =============================================================================== 

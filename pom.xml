@@ -33,29 +33,6 @@ limitations under the License.
 	<description>Amazon MWS Orders API Client Library</description>
 	<url>http://docs.developer.amazonservices.com/en_US/orders/2013-09-01/index.html</url>
 
-	<properties>
-		<!-- Unify the encoding for all modules -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<jdk.version>1.6</jdk.version>
-		<compiler.fork>1.6</compiler.fork>
-
-		<!-- 
-		  Turning off doclint in JDK 8 Javadoc
-		- http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
-		-->
-		<additionalparam>-Xdoclint:none</additionalparam>
-
-		<amazon-mws-client-runtime-version>1.0.1</amazon-mws-client-runtime-version>
-		<maven-bundle-version>2.3.7</maven-bundle-version>
-		<commons-codec-version>1.6</commons-codec-version>
-		<commons-logging-version>1.1</commons-logging-version>
-		<org-apache-httpcomponents-version>4.2.3</org-apache-httpcomponents-version>
-
-		<mockito-version>1.9.5</mockito-version>
-		<junit-version>4.11</junit-version>
-	</properties>
 
 	<licenses>
 		<license>
@@ -97,6 +74,30 @@ limitations under the License.
 	<prerequisites>
 		<maven>3.0.2</maven>
 	</prerequisites>
+
+	<properties>
+		<!-- Unify the encoding for all modules -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<jdk.version>1.6</jdk.version>
+		<compiler.fork>1.6</compiler.fork>
+
+		<!-- 
+		  Turning off doclint in JDK 8 Javadoc
+		- http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
+		-->
+		<additionalparam>-Xdoclint:none</additionalparam>
+
+		<amazon-mws-client-runtime-version>1.0.2</amazon-mws-client-runtime-version>
+		<maven-bundle-version>2.3.7</maven-bundle-version>
+		<commons-codec-version>1.6</commons-codec-version>
+		<commons-logging-version>1.1</commons-logging-version>
+		<org-apache-httpcomponents-version>4.2.3</org-apache-httpcomponents-version>
+
+		<mockito-version>1.9.5</mockito-version>
+		<junit-version>4.11</junit-version>
+	</properties>
 
 	<dependencies>
 		<dependency>
