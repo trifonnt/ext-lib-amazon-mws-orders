@@ -27,7 +27,7 @@ limitations under the License.
 
 	<groupId>com.github.trifonnt</groupId>
 	<artifactId>ext-lib-amazon-mws-orders</artifactId>
-	<version>1.0.0-alpha.6</version>
+	<version>1.0.7</version>
 	<packaging>jar</packaging>
 	<name>Amazon MWS :: Orders</name>
 	<description>Amazon MWS Orders API Client Library</description>
@@ -89,14 +89,14 @@ limitations under the License.
 		-->
 		<additionalparam>-Xdoclint:none</additionalparam>
 
-		<amazon-mws-client-runtime-version>1.0.2</amazon-mws-client-runtime-version>
+		<amazon-mws-client-runtime-version>[1.0.3,)</amazon-mws-client-runtime-version>
 		<maven-bundle-version>2.3.7</maven-bundle-version>
-		<commons-codec-version>1.6</commons-codec-version>
-		<commons-logging-version>1.1</commons-logging-version>
-		<org-apache-httpcomponents-version>4.2.3</org-apache-httpcomponents-version>
+		<!--commons-codec-version>1.6</commons-codec-version-->
+		<!--commons-logging-version>1.1</commons-logging-version-->
+		<!--org-apache-httpcomponents-version>[4.3.6,)</org-apache-httpcomponents-version-->
 
 		<mockito-version>1.9.5</mockito-version>
-		<junit-version>4.11</junit-version>
+		<junit-version>[4.13.1,)</junit-version>
 	</properties>
 
 	<dependencies>
@@ -106,27 +106,21 @@ limitations under the License.
 			<version>${amazon-mws-client-runtime-version}</version>
 		</dependency>
 
-		<dependency>
+		<!--dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>${commons-codec-version}</version>
-		</dependency>
-		<dependency>
+		</dependency-->
+		<!--dependency>
 		    <groupId>commons-logging</groupId>
 		    <artifactId>commons-logging-api</artifactId>
 		    <version>${commons-logging-version}</version>
-		</dependency>
-		<dependency>
+		</dependency-->
+		<!--dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>${org-apache-httpcomponents-version}</version>
-			<!--exclusions>
-				<exclusion>
-					<groupId>org.apache.httpcomponents</groupId>
-					<artifactId>httpcore</artifactId>
-				</exclusion>
-			</exclusions-->
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>

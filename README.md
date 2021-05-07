@@ -70,7 +70,7 @@ $ mvn clean install -Dmaven.javadoc.skip=true -DskipTests=true
  - Open below URL in order to start JitPack build process
 
 ```shell
-https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.5
+https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.7
 ```
 
 ### Get this project into your Maven build(pom.xml)
@@ -87,7 +87,7 @@ https://jitpack.io/com/github/trifonnt/ext-lib-amazon-mws-orders/1.0.0-alpha.5
  	<dependency>
 	    <groupId>com.github.trifonnt</groupId>
 	    <artifactId>ext-lib-amazon-mws-orders</artifactId>
-	    <version>1.0.0</version>
+	    <version>1.0.7</version>
 	</dependency>
 ...
 ```
